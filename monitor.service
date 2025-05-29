@@ -1,0 +1,14 @@
+[Unit]
+Description=Monitor script for test process
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/monitor.sh
+Restart=always
+RestartSec=60
+User=root
+Group=root
+
+[Install]
+WantedBy=multi-user.target
